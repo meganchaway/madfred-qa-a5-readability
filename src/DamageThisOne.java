@@ -10,28 +10,19 @@ public class DamageThisOne {
 	 */
 	
 	public static void main(String[] args) {
-		//This section declares variables and instantiates the Scanner sc
-		int ticketNumber, stem, checkDigit;
-		Scanner sc = new Scanner(System.in);
-		
-		/* This section requests input from the user, in the form of a 
-		 * six digit number, then it generates a stem and checkdigit 
-		 * from that number
-		 */
-		System.out.print("Please enter a six-digit ticket number: ");
-		ticketNumber = sc.nextInt();
-		stem = ticketNumber / 10;
-		checkDigit = ticketNumber % 10;	
+	//This section declares variables and instantiates the Scanner sc
+	int ticketNumber, stem, checkDigit;
+	Scanner kbrd = new Scanner(System.in);System.out.print("Please enter your age: ");
+	ticketNumber = kbrd.nextInt();stem = ticketNumber / 10;
+	checkDigit = ticketNumber % 10;	
 
-		/* This section will check the validity of the ticket number
-		 * and continue to prompt the user for a new ticket number
-		 * while the current number is invalid
+		/* Ticket #
 		 */
-		while (checkDigit != stem % 7) {
+		while (checkDigit != stem % 7) 
+{
 			System.out.println("That is NOT a valid ticket number, bucko!");
 			System.out.print("Try again: ");
-			ticketNumber = sc.nextInt();
-			stem = ticketNumber / 10;
+			ticketNumber = kbrd.nextInt();stem = ticketNumber / 10;
 			checkDigit = ticketNumber % 10;	
 		}
 						
